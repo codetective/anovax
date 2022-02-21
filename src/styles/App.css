@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&family=Metal+Mania&family=Righteous&display=swap');
+
+.righteous {
+  font-family: 'Righteous', cursive, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.metal,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Metal Mania', cursive, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.exo,
+p,
+span,
+div,
+button {
+  font-family: 'Exo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #000 !important;
+}
+#app {
+  animation-duration: 15000s;
+  animation-iteration-count: infinite;
+  animation-name: SCROLL-BG;
+  animation-timing-function: linear;
+  background: url('../images/bg/background.jpg') 0px 0px / cover repeat
+    rgb(255, 255, 255);
+}
+
+@-webkit-keyframes SCROLL-BG {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -1e6px;
+  }
+}
+@keyframes SCROLL-BG {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -1e6px;
+  }
+}
+
+.active {
+  border-bottom: 1px solid #333;
+}
+
+#header {
+  background: url('../images/one.jpg') 0px 0px / cover no-repeat
+    rgb(255, 255, 255);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.527);
+  background-blend-mode: darken;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  background: none !important;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.pulseButton {
+  color: var(--color);
+  transition: 0.25s;
+}
+.pulseButton:hover,
+.pulseButton:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+#tokenomics {
+  background-image: url('../images/bg/bg2.jpg');
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.618);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
