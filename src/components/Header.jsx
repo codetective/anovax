@@ -47,52 +47,58 @@ const Header = () => {
           </chakra.p>
           <Box
             h="50px"
-            bg="black"
             width={'fit-content'}
             m={{ base: '0', md: 'auto' }}
             px="4"
             minW="250px"
+            position="relative"
             rounded="lg"
           >
             <AnimatePresence>
               {tagIndex === 0 && (
-                <motion.div
+                <Box
+                  as={motion.div}
                   key="0"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.5, ease: 'linear' }}
+                  position="absolute"
                 >
-                  <Text as="h1" color={'white'} fontSize={'28px'}>
+                  <Text as="h1" color={'white'} fontSize={'35px'}>
                     {tags[0]}
                   </Text>
-                </motion.div>
+                </Box>
               )}
               {tagIndex === 1 && (
-                <motion.div
+                <Box
+                  as={motion.div}
                   key="1"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.5, ease: 'linear' }}
+                  position={'absolute'}
                 >
-                  <Text as="h1" color={'white'} fontSize={'28px'}>
+                  <Text as="h1" color={'white'} fontSize={'35px'}>
                     {tags[1]}
                   </Text>
-                </motion.div>
+                </Box>
               )}
               {tagIndex === 2 && (
-                <motion.div
+                <Box
+                  as={motion.div}
                   key="2"
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.5, ease: 'linear' }}
+                  position={'absolute'}
                 >
-                  <Text as="h1" color={'white'} fontSize={'28px'}>
+                  <Text as="h1" color={'white'} fontSize={'35px'}>
                     {tags[2]}
                   </Text>
-                </motion.div>
+                </Box>
               )}
             </AnimatePresence>
           </Box>
@@ -114,3 +120,113 @@ const Header = () => {
 };
 
 export default Header;
+
+// import React from 'react';
+// import {
+//   chakra,
+//   Box,
+//   useColorModeValue,
+//   Stack,
+//   Button,
+//   Link,
+// } from '@chakra-ui/react';
+
+// const Hero = () => {
+//   return (
+//     <Box pos="relative" overflow="hidden" id="header" py="40px">
+//       <Box maxW="7xl" mx="auto">
+//         <Box
+//           pos="relative"
+//           pb={{ base: 8, sm: 16, md: 20, lg: 28, xl: 32 }}
+//           w="full"
+//           border="solid 1px transparent"
+//         >
+//           <Box
+//             mx="auto"
+//             maxW={{ base: '7xl' }}
+//             px={{ base: 4, sm: 6, lg: 8 }}
+//             mt={{ base: 12, md: 16, lg: 20, xl: 28 }}
+//           >
+//             <Box
+//               textAlign="center"
+//               w={{ base: 'full', md: 11 / 12, xl: 8 / 12 }}
+//               mx="auto"
+//             >
+//               <chakra.h1
+//                 fontSize={{ base: '4xl', sm: '5xl', md: '6xl' }}
+//                 letterSpacing="tight"
+//                 lineHeight="short"
+//                 fontWeight="extrabold"
+//                 color="white"
+//               >
+//                 <chakra.span display={{ base: 'block', xl: 'inline' }}>
+//                   Digiland DAO for{' '}
+//                 </chakra.span>
+//                 <chakra.span
+//                   display={{ base: 'block', xl: 'inline' }}
+//                   color={useColorModeValue('brand.600', 'brand.400')}
+//                 >
+//                   land ownership
+//                 </chakra.span>
+//               </chakra.h1>
+//               <chakra.p
+//                 mt={{ base: 3, sm: 5, md: 5 }}
+//                 mx={{ sm: 'auto', lg: 0 }}
+//                 mb={6}
+//                 fontSize={{ base: 'xl', md: 'xl' }}
+//                 color="gray.300"
+//                 lineHeight="base"
+//               >
+//                 digitalizing land ownership on the blockchain
+//               </chakra.p>
+//               <Stack
+//                 mx="auto"
+//                 direction={{ base: 'column', sm: 'column', md: 'row' }}
+//                 mb={{ base: 4, md: 8 }}
+//                 spacing={{ base: 4, md: 2 }}
+//                 justifyContent="center"
+//                 w={['80%', '60%']}
+//               >
+//                 <Button
+//                   border="solid 1px transparent"
+//                   fontSize={{ base: 'md', md: 'lg' }}
+//                   rounded="md"
+//                   color="white"
+//                   bg="blue.800"
+//                   px={{ base: 8, md: 10 }}
+//                   py={{ base: 5, md: 7 }}
+//                   cursor="pointer"
+//                   w="full"
+//                   as={Link}
+//                   href="#getinvolved"
+//                   _hover={{
+//                     textDecoration: 'none',
+//                     bg: 'brand.700',
+//                   }}
+//                 >
+//                   Get involved!
+//                 </Button>
+//                 <Button
+//                   w="full"
+//                   px={{ base: 8, md: 10 }}
+//                   py={{ base: 5, md: 7 }}
+//                   border="solid 1px transparent"
+//                   fontSize={{ base: 'md', md: 'lg' }}
+//                   rounded="md"
+//                   color="gray.300"
+//                   bg="brand.100"
+//                   _hover={{ bg: 'blue.900' }}
+//                   cursor="pointer"
+//                 >
+//                   Vote
+//                 </Button>
+//               </Stack>
+//             </Box>
+//           </Box>
+//         </Box>
+//       </Box>
+//     </Box>
+//   );
+// };
+
+// export default Hero;
