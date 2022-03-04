@@ -11,28 +11,36 @@ function NavMD() {
       </ScrollLink>
       <HStack spacing="10" alignItems="center">
         <ScrollLink to="about">
-          <Text cursor={'pointer'} as="a" fontSize={'20px'} display="block">
+          <Text py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
             About
           </Text>
         </ScrollLink>
         <ScrollLink to="features">
-          <Text cursor={'pointer'} as="a" fontSize={'20px'}>
+          <Text py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
             Features
           </Text>
         </ScrollLink>
-        <ScrollLink to="tokenomics">
-          <Text cursor={'pointer'} as="a" fontSize={'20px'}>
+        <Link
+          href="https://anovax.gitbook.io/anova-gamebox/anovax-usdanv-token/distribution"
+          isExternal
+          target={'_blank'}
+        >
+          <Text py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
             Tokenomics
           </Text>
-        </ScrollLink>
-        <Link href="#" isExternal target={'_blank'}>
-          <Text fontSize={'20px'} as="a" cursor={'pointer'}>
-            Contract
+        </Link>
+        <Link
+          href="https://anovax.gitbook.io/anova-gamebox"
+          isExternal
+          target={'_blank'}
+        >
+          <Text py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
+            Whitepaper
           </Text>
         </Link>
         <Link href="#" isExternal target={'_blank'}>
-          <Text fontSize={'20px'} as="a" cursor={'pointer'}>
-            Docs
+          <Text py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
+            Contract
           </Text>
         </Link>
       </HStack>

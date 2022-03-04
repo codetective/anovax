@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Text } from '@chakra-ui/react';
+import { Box, Button, Stack, Text, HStack, Link } from '@chakra-ui/react';
 import React from 'react';
 import WrapContent from './general/WrapContent';
 
@@ -23,19 +23,38 @@ export default function Tokenomics() {
             $ANV serves as the native currency for AnovaX. Players use $ANV to
             mint characters, mint arenas, extending the lives of your characters
             by hiring and Buy/Sell on the AnovaX Marketplace. There is a maximum
-            supply of 100,000,000 $ANV tokens. Liquidity will be locked and the
-            Game rewards will be realized by percentage every month.
+            supply of 1,000,000,000 $ANV tokens. Liquidity will be locked and
+            the Game rewards will be realized by percentage every month.
           </Text>
           <br />
-          <Button
-            border={'1px solid'}
-            p="1em 2em"
-            className="pulse pulseButton exo"
-            bg="none"
-            fontSize={'20px'}
-          >
-            Download Whitepaper
-          </Button>
+          <HStack spacing="10" alignItems="center" justify="center">
+            <Button
+              as={Link}
+              border={'1px solid'}
+              p="1em 2em"
+              className="pulse pulseButton exo"
+              bg="none"
+              fontSize={'20px'}
+              href="https://anovax.gitbook.io/anova-gamebox/anovax-usdanv-token/distribution"
+              isExternal
+              target={'_blank'}
+            >
+              Tokenomics
+            </Button>
+            <Button
+              as={Link}
+              href="https://anovax.gitbook.io/anova-gamebox"
+              isExternal
+              target={'_blank'}
+              border={'1px solid'}
+              p="1em 2em"
+              className="pulse pulseButton exo"
+              bg="none"
+              fontSize={'20px'}
+            >
+              Whitepaper
+            </Button>
+          </HStack>
         </Stack>
       </WrapContent>
     </Box>

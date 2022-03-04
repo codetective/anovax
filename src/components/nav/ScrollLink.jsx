@@ -10,7 +10,7 @@ export default function ScrollLink({ children, to }) {
     <Link
       activeClass="active"
       to={to}
-      spy={true}
+      spy={false}
       smooth={true}
       offset={-70}
       duration={500}

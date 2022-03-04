@@ -6,25 +6,25 @@ import {
   FaMedium,
   FaTelegram,
   FaTwitter,
-  FaYoutube,
+  FaGithub,
 } from 'react-icons/fa';
 
 const links = [
   {
-    name: 'Youtube',
-    url: 'https://youtube.com/channel/UC0kb78eqE4hgTZ1v6olLlkg',
+    name: 'Github',
+    url: 'https://github.com/anovabox',
   },
   {
     name: 'Medium',
-    url: 'https://medium.com/@AnovaX_official',
+    url: 'https://medium.com/@anovagamebox',
   },
   {
     name: 'Twitter',
-    url: 'https://mobile.twitter.com/AnovaX_official',
+    url: 'https://mobile.twitter.com/AnovaXOfficial',
   },
   {
     name: 'Telegram',
-    url: 'https://t.me/AnovaXChat1',
+    url: 'https://t.me/AnovaXOfficial',
   },
 ];
 
@@ -46,12 +46,12 @@ function TopContactBar() {
               alignItems={'center'}
               fontSize={'md'}
             >
-              <Box as="span" pr="2">
+              {/* <Box as="span" pr="2">
                 <FaEnvelope />
               </Box>
               <a className="righteous" href="mailto:OficialAnovaX1@gmail.com">
                 CONTACT
-              </a>
+              </a> */}
             </Text>
           </Box>
           <HStack spacing={8}>
@@ -64,8 +64,8 @@ function TopContactBar() {
               >
                 <Icon
                   as={
-                    link.name === 'Youtube'
-                      ? FaYoutube
+                    link.name === 'Github'
+                      ? FaGithub
                       : link.name === 'Twitter'
                       ? FaTwitter
                       : link.name === 'Telegram'

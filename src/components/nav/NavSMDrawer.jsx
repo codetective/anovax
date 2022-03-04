@@ -38,19 +38,27 @@ function NavSMDrawer(props) {
                   Features
                 </Text>
               </ScrollLink>
-              <ScrollLink to="tokenomics">
+              <Link
+                href="https://anovax.gitbook.io/anova-gamebox/anovax-usdanv-token/distribution"
+                isExternal
+                target={'_blank'}
+              >
                 <Text px="6" py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
                   Tokenomics
                 </Text>
-              </ScrollLink>
+              </Link>
               <Link href="#" isExternal target={'_blank'}>
                 <Text px="6" py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
                   Contract
                 </Text>
               </Link>
-              <Link href="#" isExternal target={'_blank'}>
+              <Link
+                href="https://anovax.gitbook.io/anova-gamebox"
+                isExternal
+                target={'_blank'}
+              >
                 <Text px="6" py="5" fontSize={'20px'} as="a" cursor={'pointer'}>
-                  Docs
+                  Whitepaper
                 </Text>
               </Link>
             </VStack>
